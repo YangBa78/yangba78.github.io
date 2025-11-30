@@ -140,13 +140,25 @@ h2 {
   margin-bottom: 12px;
 }
 
-/* common link style */
 .footer-link {
-  display: inline-block;
   margin: 0 12px;
-  color: #0366d6;
   text-decoration: none;
+  color: #0366d6;
 }
+
+/* Email & LinkedIn (FontAwesome) */
+.footer-link i {
+  font-size: 2.0em;
+}
+
+/* Your Google Scholar PNG */
+.scholar-img {
+  width: 32px;   /* <-- adjust this to make icon larger or smaller */
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 4px;  /* optional */
+}
+
 
 /* fontawesome icons keep using font-size */
 .footer-link .fa-envelope,
@@ -154,16 +166,25 @@ h2 {
   font-size: 1.8em; /* change this to make envelope/linkedin larger/smaller */
 }
 
-/* SVG scholar icon sizing and color (uses currentColor) */
-.scholar-svg {
-  width: 1.75em;   /* <-- change this to scale the scholar icon */
-  height: 1.75em;
-  vertical-align: middle;
-  color: #0366d6;  /* same color as other icons; change as needed */
-}
 
-/* If you want Scholar slightly larger: */
-.scholar-link .scholar-svg { width: 2.2em; height: 2.2em; }
 
 /* Individual control for LinkedIn if needed */
 .linkedin-icon .fa-linkedin { font-size: 1.6em; }
+
+.arxiv-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  text-decoration: none;
+  color: #c0392b;   /* arXiv red */
+  font-size: 0.9em;
+}
+
+.arxiv-badge .triangle {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #c0392b; /* triangle color */
+  margin-right: 4px;
+}
