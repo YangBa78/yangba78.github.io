@@ -66,8 +66,7 @@ section {
 
 /* --------------------------------------- */
 /* FOOTER + ICONS                          */
-
-
+/* --------------------------------------- */
 footer {
   text-align: center;
   margin-top: 35px;
@@ -76,27 +75,35 @@ footer {
 }
 
 .footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 22px;         /* PERFECT spacing, no underscores, no inline spacing */
+  text-align: center;
   margin-bottom: 12px;
 }
 
-:root {
-  --icon-blue: #4285F4;   /* Google Scholar blue */
+.footer-link {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #0366d6;
 }
 
-/* Email + LinkedIn icons */
-.footer-icon {
-  font-size: 2.8rem;
-  color: var(--icon-blue);
+/* Email & LinkedIn (FontAwesome icons) */
+.footer-link i {
+  font-size: 1.9em;         /* controls email + linkedin size */
+  vertical-align: middle;
 }
 
-/* Google Scholar image (use original color, no filter) */
+/* Google Scholar PNG — SAME SIZE & BASELINE as FA icons */
 .scholar-img {
-  width: 48px;
-  height: 48px;
+  width: 34px;              /* match visual size with 1.9em FA icons */
+  height: 34px;
+  vertical-align: middle;   /* align baseline */
   object-fit: contain;
+  border-radius: 0;         /* keep square, no rounding */
+  margin-bottom: -3px;      /* perfect baseline alignment */
+}
+
+/* Optional: LinkedIn slight size tweak */
+.linkedin-icon .fa-linkedin {
+  font-size: 1.9em;
 }
 
 
