@@ -152,11 +152,15 @@ h2 {
 }
 
 /* Your Google Scholar PNG */
+/* Google Scholar PNG (match email/linkedin size & alignment) */
 .scholar-img {
-  width: 32px;   /* <-- adjust this to make icon larger or smaller */
+  width: 32px;              /* similar icon footprint */
   height: 32px;
-  vertical-align: middle;
-  border-radius: 4px;  /* optional */
+  vertical-align: middle;   /* aligns with email/linkedin icons */
+  filter: brightness(0) saturate(100%) invert(33%) sepia(64%) saturate(2500%) hue-rotate(184deg) brightness(95%) contrast(92%);
+  /* This filter recolors your PNG to the SAME light-blue tone (#0366d6) */
+  border-radius: 0;         /* ensure NOT round */
+  object-fit: contain;      /* keep shape true */
 }
 
 
@@ -166,17 +170,22 @@ h2 {
   font-size: 1.8em; /* change this to make envelope/linkedin larger/smaller */
 }
 
-
+.footer-link i,
+.scholar-img {
+  vertical-align: middle;
+  margin-bottom: -4px;   /* fine-tune alignment */
+}
 
 /* Individual control for LinkedIn if needed */
 .linkedin-icon .fa-linkedin { font-size: 1.6em; }
 
+/* arXiv badge using DHS-CAOE light blue */
 .arxiv-badge {
   display: inline-flex;
   align-items: center;
   margin-left: 8px;
   text-decoration: none;
-  color: #c0392b;   /* arXiv red */
+  color: #4da3ff;   /* DHS-CAOE light blue */
   font-size: 0.9em;
 }
 
@@ -185,6 +194,6 @@ h2 {
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 10px solid #c0392b; /* triangle color */
+  border-bottom: 10px solid #4da3ff;  /* match DHS-CAOE color */
   margin-right: 4px;
 }
