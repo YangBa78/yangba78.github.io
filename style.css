@@ -12,19 +12,26 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
+
+.nav-spacer {
+  flex: 1; /* pushes links to the right */
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #0366d6;
+  font-size: 1.05em;
+}
+
 
 .nav-title {
   font-size: 1.4em;
   font-weight: bold;
 }
 
-.nav-links a {
-  margin-left: 15px;
-  text-decoration: none;
-  color: #0366d6;
-}
 .nav-links a:hover {
   text-decoration: underline;
 }
@@ -122,4 +129,25 @@ footer {
   margin-top: 50px;
   font-size: 0.9em;
   color: #777;
+}
+
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #222;
+  position: relative;
+  padding-top: 15px; /* spacing above title */
+}
+
+/* Horizontal line ABOVE each h2 */
+h2::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e5e5e5;
+  margin-bottom: 12px; /* space between line and title */
 }
