@@ -12,22 +12,17 @@
 <nav class="navbar">
   <div class="nav-title">Yang Ba</div>
   <div class="nav-links">
-    <a href="index.html">Home</a>
+    <a href="index.html">About</a>
   </div>
 </nav>
 
 <section id="publications">
-  <h2>Publications</h2>
+  <h2 class="name-header">Publications</h2>
 
-  <h3>Conference Publications</h3>
-
-  <div class="pub">
-    <div>
-      <strong>Geometry-Aware Metric for Dataset Diversity via Persistence Landscapes</strong><br />
-      Yang Ba, Mohammad Sadeq Abolhasani, Rong Pan<br />
-      <em>In Submission</em>
-    </div>
-  </div>
+  <!-- ============================= -->
+  <!-- Conference Publications       -->
+  <!-- ============================= -->
+  <h3 class="section-title">Conference Publications</h3>
 
   <div class="pub">
     <div>
@@ -39,21 +34,46 @@
 
   <div class="pub">
     <div>
-      <strong>Data Diversity as Implicit Regularization: How Does Diversity Shape the Weight Space of Deep Neural Networks?</strong><br />
-      Yang Ba, Michelle V. Mancenido, Rong Pan<br />
-      <em>In Submission</em>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div>
       <strong>Fill In The Gaps: Model Calibration and Generalization with Synthetic Data</strong><br />
       Yang Ba, Michelle V. Mancenido, Rong Pan<br />
       <em>EMNLP 2024</em>
     </div>
   </div>
 
-  <h3>Journal Publications</h3>
+  <div class="pub">
+    <div>
+      <strong>Trust in AI-Enabled Decision Support Systems: Preliminary Validation of MAST Criteria</strong><br />
+      Erin K. Chiou, Pouria Salehi, Erik Blasch, James Sung, Myke C. Cohen, Anna Pan,
+      Michelle V. Mancenido, Ahmadreza Mosallanezhad, Yang Ba, Shawaiz Bhatti<br />
+      <em>ICHMS 2022</em>
+    </div>
+  </div>
+
+  <!-- ============================= -->
+  <!-- Preprints / In Submission     -->
+  <!-- ============================= -->
+  <h3 class="section-title">Preprints / Under Review</h3>
+
+  <div class="pub">
+    <div>
+      <strong>Geometry-Aware Metric for Dataset Diversity via Persistence Landscapes</strong><br />
+      Yang Ba, Mohammad Sadeq Abolhasani, Rong Pan<br />
+      <em>In Submission</em>
+    </div>
+  </div>
+
+  <div class="pub">
+    <div>
+      <strong>Data Diversity as Implicit Regularization: How Does Diversity Shape the Weight Space of Deep Neural Networks?</strong><br />
+      Yang Ba, Michelle V. Mancenido, Rong Pan<br />
+      <em>In Submission</em>
+    </div>
+  </div>
+
+  <!-- ============================= -->
+  <!-- Journal Publications          -->
+  <!-- ============================= -->
+  <h3 class="section-title">Journal Publications</h3>
 
   <div class="pub">
     <div>
@@ -90,21 +110,21 @@
     </div>
   </div>
 
-  <div class="pub">
-    <div>
-      <strong>Trust in AI-Enabled Decision Support Systems: Preliminary Validation of MAST Criteria</strong><br />
-      Erin K. Chiou, Pouria Salehi, Erik Blasch, James Sung,
-      Myke C. Cohen, Anna Pan, Michelle V. Mancenido,
-      Ahmadreza Mosallanezhad, Yang Ba, Shawaiz Bhatti<br />
-      <em>ICHMS 2022</em>
-    </div>
-  </div>
-
 </section>
 
 <footer>
-  © 2025 Yang Ba — Powered by GitHub Pages
+  <div class="footer-icons">
+    <a href="mailto:yangba@asu.edu"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://scholar.google.com/citations?user=gXDjDzsAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i></a>
+    <a href="https://www.linkedin.com/in/yang-ba-378733186/" target="_blank" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+
+  © <span id="year"></span> Yang Ba — Powered by GitHub Pages
 </footer>
+
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
 
 </body>
 </html>
