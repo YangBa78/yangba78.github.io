@@ -1,6 +1,3 @@
-/* --------------------------------------- */
-/* BASE PAGE LAYOUT                       */
-/* --------------------------------------- */
 body {
   font-family: Arial, sans-serif;
   max-width: 900px;
@@ -11,9 +8,6 @@ body {
 }
 
 
-/* --------------------------------------- */
-/* NAVIGATION                              */
-/* --------------------------------------- */
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -33,9 +27,6 @@ body {
 }
 
 
-/* --------------------------------------- */
-/* PROFILE PHOTO                           */
-/* --------------------------------------- */
 .about-right {
   float: right;
   width: 260px;
@@ -52,9 +43,6 @@ body {
 }
 
 
-/* --------------------------------------- */
-/* SECTIONS                                */
-/* --------------------------------------- */
 section {
   margin-bottom: 22px;
 }
@@ -64,12 +52,6 @@ section {
 }
 
 
-/* --------------------------------------- */
-/* FOOTER + ICONS                          */
-/* --------------------------------------- */
-/* --------------------------------------- */
-/* FOOTER + ICONS                          */
-/* --------------------------------------- */
 
 footer {
   text-align: center;
@@ -85,10 +67,10 @@ footer {
   margin-bottom: 12px;
 }
 
-/* Force FA icons to be black */
+/* Force FA icons (Email & LinkedIn) to be black */
 .footer-icons i {
   font-size: 3.4rem;
-  color: #000 !important;     /* <-- the guaranteed fix */
+  color: #000 !important;     
 }
 
 /* Google Scholar PNG size */
@@ -99,9 +81,6 @@ footer {
 }
 
 
-/* --------------------------------------- */
-/* SECTION HEADERS                         */
-/* --------------------------------------- */
 h2 {
   border: none !important;
   font-weight: normal !important;
@@ -145,17 +124,11 @@ h2 {
 }
 
 
-/* --------------------------------------- */
-/* LEFT-ALIGNED CONTENT                    */
-/* --------------------------------------- */
 .section-content {
   text-align: left;
 }
 
 
-/* --------------------------------------- */
-/* DHS-CAOE LINK                           */
-/* --------------------------------------- */
 .link-caoe {
   text-decoration: none;
   color: #4da3ff;
@@ -166,9 +139,6 @@ h2 {
 }
 
 
-/* --------------------------------------- */
-/* PDF + ARXIV BADGE                       */
-/* --------------------------------------- */
 .pdf-link {
   margin-left: 8px;
   color: #d9534f;
