@@ -93,8 +93,8 @@ footer {
 
 /* Google Scholar PNG — SAME SIZE & BASELINE as FA icons */
 .scholar-img {
-  width: 34px;              /* match visual size with 1.9em FA icons */
-  height: 34px;
+  width: 24px;              /* match visual size with 1.9em FA icons */
+  height: 24px;
   vertical-align: middle;   /* align baseline */
   object-fit: contain;
   /* border-radius: 0;         keep square, no rounding */
