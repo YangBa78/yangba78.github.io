@@ -1,4 +1,6 @@
-/* BASE PAGE */
+/* --------------------------------------- */
+/* BASE PAGE LAYOUT                       */
+/* --------------------------------------- */
 body {
   font-family: Arial, sans-serif;
   max-width: 900px;
@@ -8,7 +10,10 @@ body {
   color: #333;
 }
 
-/* NAVIGATION */
+
+/* --------------------------------------- */
+/* NAVIGATION                              */
+/* --------------------------------------- */
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -27,74 +32,78 @@ body {
   text-decoration: underline;
 }
 
-/* FLOATED PROFILE PHOTO */
-.profile-pic-right {
+
+/* --------------------------------------- */
+/* PROFILE PHOTO (LARGER + FLOAT RIGHT)    */
+/* --------------------------------------- */
+.about-right {
   float: right;
-  width: 160px;
-  height: auto;
-  border-radius: 10px;
-  margin-left: 20px;
+  width: 260px; /* slightly wider container */
+  text-align: center;
+  margin-left: 25px;
   margin-bottom: 10px;
 }
 
-/* CONTACT ICONS */
-.contact-icons {
-  margin-top: 20px;
+.profile-pic-right {
+  width: 240px; /* <-- LARGER photo */
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
 }
 
-.contact-icons a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #0366d6;
-  font-size: 1.05em;
-}
 
-.contact-icons i {
-  margin-right: 6px;
-}
-
-/* PUBLICATIONS */
+/* --------------------------------------- */
+/* PUBLICATIONS                            */
+/* --------------------------------------- */
 .pub {
   margin-bottom: 20px;
 }
 
-/* FOOTER */
+
+/* --------------------------------------- */
+/* FOOTER + CONTACT ICONS AT BOTTOM        */
+/* --------------------------------------- */
 footer {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
   font-size: 0.9em;
   color: #777;
 }
 
+.footer-icons {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.footer-icons a {
+  margin: 0 18px;
+  font-size: 2.0em; /* LARGER icons */
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  color: #024c9a;
+}
+
+
 /* --------------------------------------- */
-/* SECTION HEADERS — ONLY ONE LINE ABOVE   */
+/* SECTION HEADERS                         */
 /* --------------------------------------- */
 
-/* Remove ALL possible borders/lines BELOW */
-h2 {
-  font-size: 1.5em;
+/* Clean, minimal section titles */
+.section-title {
+  font-weight: normal !important; /* NO bold */
+  font-size: 1.4em;
+  color: #222;
   margin-top: 50px;
   margin-bottom: 12px;
-  font-weight: bold;
-  color: #222;
-  position: relative;
   padding-top: 15px;
-
-  border: none !important;
-  border-bottom: none !important;
-  outline: none !important;
-  box-shadow: none !important;
+  position: relative;
 }
 
-/* Remove after-element if any user agent inserts it */
-h2::after {
-  content: none !important;
-  display: none !important;
-  border: none !important;
-}
-
-/* ADD LINE ABOVE ONLY */
-h2::before {
+/* Only line above */
+.section-title::before {
   content: "";
   display: block;
   width: 100%;
@@ -103,33 +112,39 @@ h2::before {
   margin-bottom: 12px;
 }
 
-/* Wrap image + contact links together */
-.about-right {
-  float: right;
-  width: 220px;            /* controls width of right block */
-  text-align: center;      /* center links under photo */
-  margin-left: 25px;
-  margin-bottom: 10px;
+
+/* --------------------------------------- */
+/* MAIN NAME HEADER ("Yang Ba")            */
+/* --------------------------------------- */
+.name-header {
+  font-size: 2.4em;
+  font-weight: 700;
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  position: relative;
 }
 
-/* Bigger profile photo */
-.profile-pic-right {
-  width: 200px;            /* increase size */
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 12px;     /* space between photo and links */
+/* Line above the name also */
+.name-header::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e5e5e5;
+  margin-bottom: 12px;
 }
 
-/* Vertical contact icons directly under image */
-.contact-icons-vertical a {
-  display: block;          /* force each link on its own line */
-  margin: 6px 0;
-  text-decoration: none;
-  color: #0366d6;
-  font-size: 1.05em;
+
+/* --------------------------------------- */
+/* REMOVE ALL DEFAULT H2 STYLING           */
+/* (prevents double-lines)                 */
+/* --------------------------------------- */
+h2 {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.contact-icons-vertical a i {
-  margin-right: 6px;
-}
 
