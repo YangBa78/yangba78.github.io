@@ -38,14 +38,14 @@ body {
 /* --------------------------------------- */
 .about-right {
   float: right;
-  width: 260px; /* slightly wider container */
+  width: 260px;
   text-align: center;
   margin-left: 25px;
   margin-bottom: 10px;
 }
 
 .profile-pic-right {
-  width: 240px; /* <-- LARGER photo */
+  width: 240px;      /* larger image */
   height: auto;
   border-radius: 12px;
   margin-bottom: 12px;
@@ -77,7 +77,7 @@ footer {
 
 .footer-icons a {
   margin: 0 18px;
-  font-size: 2.0em; /* LARGER icons */
+  font-size: 2.0em;       /* large icons */
   color: #0366d6;
   text-decoration: none;
 }
@@ -91,10 +91,39 @@ footer {
 /* SECTION HEADERS                         */
 /* --------------------------------------- */
 
-/* Clean, minimal section titles */
+/* GENERAL H2 RESET */
+h2 {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-weight: normal !important;   /* remove bold globally */
+}
+
+/* ONLY “Yang Ba” stays bold + larger */
+.name-header {
+  font-size: 2.4em;
+  font-weight: 700 !important;      /* bold */
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  position: relative;
+}
+
+/* Line above the name */
+.name-header::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e5e5e5;
+  margin-bottom: 12px;
+}
+
+/* All other section titles (NOT bold) */
 .section-title {
-  font-weight: normal !important; /* NO bold */
   font-size: 1.4em;
+  font-weight: normal !important;
   color: #222;
   margin-top: 50px;
   margin-bottom: 12px;
@@ -102,7 +131,7 @@ footer {
   position: relative;
 }
 
-/* Only line above */
+/* Line above section titles */
 .section-title::before {
   content: "";
   display: block;
@@ -114,37 +143,10 @@ footer {
 
 
 /* --------------------------------------- */
-/* MAIN NAME HEADER ("Yang Ba")            */
+/* CLEAN LEFT-ALIGNED SECTION CONTENT      */
 /* --------------------------------------- */
-.name-header {
-  font-size: 2.4em;
-  font-weight: 700;
-  color: #000;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  padding-top: 20px;
-  position: relative;
+.section-content {
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
 }
-
-/* Line above the name also */
-.name-header::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #e5e5e5;
-  margin-bottom: 12px;
-}
-
-
-/* --------------------------------------- */
-/* REMOVE ALL DEFAULT H2 STYLING           */
-/* (prevents double-lines)                 */
-/* --------------------------------------- */
-h2 {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-

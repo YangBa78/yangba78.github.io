@@ -74,17 +74,21 @@
 <!-- Teaching Section -->
 <section id="teaching">
   <h2 class="section-title">Teaching Experience</h2>
-  <ul>
-    <p>Teaching Assistant, Arizona State University, CSE 110: Principles of Programming, Fall 2021.</p>
-    <p>Graduate Teaching Assistant, University of Connecticut, OPIM 5671: Data Mining and Business Intelligence, Spring 2021.</p>
-  </ul>
+  <div class="section-content">
+    Teaching Assistant, Arizona State University, CSE 110: Principles of Programming, Fall 2021.<br><br>
+    Graduate Teaching Assistant, University of Connecticut, OPIM 5671: Data Mining and Business Intelligence, Spring 2021.
+  </div>
 </section>
+
 
 <!-- Service Section -->
 <section id="service">
   <h2 class="section-title">Professional Service</h2>
-  <p>Conference Reviewer: ICLR 2025, ICLR 2026, NeurIPS 2025, Journal of Quality Technology</p>
+  <div class="section-content">
+    Reviewer: ICLR 2025, ICLR 2026, NeurIPS 2025, Journal of Quality Technology
+  </div>
 </section>
+
 
 <footer>
   <div class="footer-icons">
@@ -93,8 +97,12 @@
     <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
   </div>
 
-  © 2025 Yang Ba — Powered by GitHub Pages
+  <span id="year"></span> © Yang Ba — Powered by GitHub Pages
 </footer>
+
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
 
 </body>
 </html>
