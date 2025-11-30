@@ -1,6 +1,4 @@
-/* --------------------------------------- */
-/* BASE PAGE LAYOUT                       */
-/* --------------------------------------- */
+/* BASE PAGE LAYOUT */
 body {
   font-family: Arial, sans-serif;
   max-width: 900px;
@@ -10,15 +8,12 @@ body {
   color: #333;
 }
 
-
-/* --------------------------------------- */
-/* NAVIGATION                              */
-/* --------------------------------------- */
+/* NAVIGATION */
 .navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px; /* reduced */
 }
 
 .nav-links a {
@@ -32,121 +27,89 @@ body {
   text-decoration: underline;
 }
 
-
-/* --------------------------------------- */
-/* PROFILE PHOTO (LARGER + FLOAT RIGHT)    */
-/* --------------------------------------- */
+/* PROFILE PHOTO */
 .about-right {
   float: right;
   width: 260px;
   text-align: center;
-  margin-left: 25px;
-  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-bottom: 5px; /* reduced */
 }
 
 .profile-pic-right {
-  width: 240px;      /* larger image */
+  width: 240px;
   height: auto;
   border-radius: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 6px; /* reduced */
 }
 
+/* SECTION SPACING FIX — REDUCE SPACE */
+section {
+  margin-bottom: 22px; /* smaller spacing between sections */
+}
 
-/* --------------------------------------- */
-/* PUBLICATIONS                            */
-/* --------------------------------------- */
+/* PUBLICATIONS */
 .pub {
-  margin-bottom: 20px;
+  margin-bottom: 12px; /* reduced spacing */
 }
 
-
-/* --------------------------------------- */
-/* FOOTER + CONTACT ICONS AT BOTTOM        */
-/* --------------------------------------- */
+/* FOOTER */
 footer {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 35px; /* reduced */
   font-size: 0.9em;
   color: #777;
 }
 
-.footer-icons {
-  text-align: center;
-  margin-bottom: 18px;
-}
-
 .footer-icons a {
-  margin: 0 18px;
-  font-size: 4.0em;       /* large icons */
+  margin: 0 12px; /* smaller spacing */
+  font-size: 3em;
   color: #0366d6;
   text-decoration: none;
 }
 
-.footer-icons a:hover {
-  color: #024c9a;
-}
-
-
-/* --------------------------------------- */
-/* SECTION HEADERS                         */
-/* --------------------------------------- */
-
-/* GENERAL H2 RESET */
+/* SECTION HEADERS */
 h2 {
   border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  font-weight: normal !important;   /* remove bold globally */
+  font-weight: normal !important;
 }
 
-/* ONLY “Yang Ba” stays bold + larger */
+/* Name header (bold + large) */
 .name-header {
   font-size: 2.4em;
-  font-weight: 700 !important;      /* bold */
-  color: #000;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  padding-top: 20px;
+  font-weight: 700 !important;
+  margin-top: 20px; /* reduced */
+  margin-bottom: 10px;
+  padding-top: 10px;
   position: relative;
 }
-
-/* Line above the name */
 .name-header::before {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
   background: #e5e5e5;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
-/* All other section titles (NOT bold) */
+/* Other section titles (not bold) */
 .section-title {
-  font-size: 1.4em;
-  font-weight: normal !important;
-  color: #222;
-  margin-top: 50px;
-  margin-bottom: 12px;
-  padding-top: 15px;
+  font-size: 1.35em;
+  margin-top: 25px; /* reduced from 50 */
+  margin-bottom: 6px; 
+  padding-top: 6px;
   position: relative;
 }
-
-/* Line above section titles */
 .section-title::before {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
   background: #e5e5e5;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
-
-/* --------------------------------------- */
-/* CLEAN LEFT-ALIGNED SECTION CONTENT      */
-/* --------------------------------------- */
+/* TEXT BLOCKS */
 .section-content {
-  margin-left: 0;
-  padding-left: 0;
   text-align: left;
 }

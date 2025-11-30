@@ -80,7 +80,6 @@
   </div>
 </section>
 
-
 <!-- Service Section -->
 <section id="service">
   <h2 class="section-title">Professional Service</h2>
@@ -89,7 +88,7 @@
   </div>
 </section>
 
-
+<!-- Footer -->
 <footer>
   <div class="footer-icons">
     <a href="mailto:yangba@asu.edu"><i class="fa-solid fa-envelope"></i></a>
@@ -97,19 +96,21 @@
     <a href="https://www.linkedin.com/in/yang-ba-378733186/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
   </div>
 
-  <span id="year"></span> © Yang Ba — Powered by GitHub Pages
+  <div id="updated-date"></div>
+
+  © <span id="year"></span> Yang Ba — Powered by GitHub Pages
 </footer>
 
 <script>
+  // auto year
   document.getElementById("year").innerText = new Date().getFullYear();
 
+  // last updated
   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   const now = new Date();
   const formatted = months[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
   document.getElementById("updated-date").innerText = "Last updated: " + formatted;
 </script>
 
-
 </body>
 </html>
-
