@@ -1,4 +1,6 @@
-/* BASE PAGE LAYOUT */
+/* --------------------------------------- */
+/* BASE PAGE LAYOUT                       */
+/* --------------------------------------- */
 body {
   font-family: Arial, sans-serif;
   max-width: 900px;
@@ -8,12 +10,15 @@ body {
   color: #333;
 }
 
-/* NAVIGATION */
+
+/* --------------------------------------- */
+/* NAVIGATION                              */
+/* --------------------------------------- */
 .navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 15px; /* reduced */
+  margin-bottom: 15px;
 }
 
 .nav-links a {
@@ -27,114 +32,48 @@ body {
   text-decoration: underline;
 }
 
-/* PROFILE PHOTO */
+
+/* --------------------------------------- */
+/* PROFILE PHOTO                           */
+/* --------------------------------------- */
 .about-right {
   float: right;
   width: 260px;
   text-align: center;
   margin-left: 20px;
-  margin-bottom: 5px; /* reduced */
+  margin-bottom: 5px;
 }
 
 .profile-pic-right {
   width: 240px;
   height: auto;
   border-radius: 12px;
-  margin-bottom: 6px; /* reduced */
+  margin-bottom: 6px;
 }
 
-/* SECTION SPACING FIX — REDUCE SPACE */
+
+/* --------------------------------------- */
+/* SECTION SPACING                         */
+/* --------------------------------------- */
 section {
-  margin-bottom: 22px; /* smaller spacing between sections */
+  margin-bottom: 22px; /* tighter spacing */
 }
 
-/* PUBLICATIONS */
 .pub {
-  margin-bottom: 12px; /* reduced spacing */
+  margin-bottom: 12px;
 }
 
-/* FOOTER */
+
+/* --------------------------------------- */
+/* FOOTER + ICONS                          */
+/* --------------------------------------- */
 footer {
   text-align: center;
-  margin-top: 35px; /* reduced */
+  margin-top: 35px;
   font-size: 0.9em;
   color: #777;
 }
 
-.footer-icons a {
-  margin: 0 12px; /* smaller spacing */
-  font-size: 2em;
-  color: #0366d6;
-  text-decoration: none;
-}
-
-/* SECTION HEADERS */
-h2 {
-  border: none !important;
-  font-weight: normal !important;
-}
-
-/* Name header (bold + large) */
-.name-header {
-  font-size: 2.4em;
-  font-weight: 700 !important;
-  margin-top: 20px; /* reduced */
-  margin-bottom: 10px;
-  padding-top: 10px;
-  position: relative;
-}
-.name-header::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #e5e5e5;
-  margin-bottom: 8px;
-}
-
-/* Other section titles (not bold) */
-.section-title {
-  font-size: 1.35em;
-  margin-top: 25px; /* reduced from 50 */
-  margin-bottom: 6px; 
-  padding-top: 6px;
-  position: relative;
-}
-.section-title::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #e5e5e5;
-  margin-bottom: 6px;
-}
-
-/* TEXT BLOCKS */
-.section-content {
-  text-align: left;
-}
-
-.link-caoe {
-  text-decoration: none;
-  color: #4da3ff;     /* light blue */
-  font-weight: normal;
-}
-
-.link-caoe:hover {
-  color: #1d7fe0;     /* slightly darker on hover */
-}
-
-.pdf-link {
-  margin-left: 8px;
-  color: #d9534f;        /* PDF red */
-  text-decoration: none;
-  font-size: 1.1em;
-}
-
-.pdf-link:hover {
-  color: #b52b27;        /* darker on hover */
-}
-/* footer icons container */
 .footer-icons {
   text-align: center;
   margin-bottom: 12px;
@@ -146,46 +85,126 @@ h2 {
   color: #0366d6;
 }
 
-/* Email & LinkedIn (FontAwesome) */
+/* FontAwesome icons (email, linkedin) */
 .footer-link i {
-  font-size: 2.0em;
+  font-size: 2em;
+  vertical-align: middle;
 }
 
-/* Your Google Scholar PNG */
-/* Google Scholar PNG (match email/linkedin size & alignment) */
+/* Google Scholar PNG — match baseline + size + color */
 .scholar-img {
-  width: 32px;              /* similar icon footprint */
+  width: 32px;        /* SAME size as fontawesome icons */
   height: 32px;
-  vertical-align: middle;   /* aligns with email/linkedin icons */
-  filter: brightness(0) saturate(100%) invert(33%) sepia(64%) saturate(2500%) hue-rotate(184deg) brightness(95%) contrast(92%);
-  /* This filter recolors your PNG to the SAME light-blue tone (#0366d6) */
-  border-radius: 0;         /* ensure NOT round */
-  object-fit: contain;      /* keep shape true */
+  vertical-align: middle;
+  object-fit: contain;
+  border-radius: 0;
+
+  /* Recolor PNG to GitHub blue (#0366d6) */
+  filter: brightness(0) saturate(100%) invert(33%) sepia(64%) 
+          saturate(2500%) hue-rotate(184deg) brightness(95%) contrast(92%);
 }
 
-
-/* fontawesome icons keep using font-size */
-.footer-link .fa-envelope,
-.footer-link .fa-linkedin {
-  font-size: 1.8em; /* change this to make envelope/linkedin larger/smaller */
-}
-
+/* Align PNG & FA icons perfectly on same baseline */
 .footer-link i,
 .scholar-img {
   vertical-align: middle;
-  margin-bottom: -4px;   /* fine-tune alignment */
+  margin-bottom: -3px;   /* refined baseline alignment */
 }
 
-/* Individual control for LinkedIn if needed */
-.linkedin-icon .fa-linkedin { font-size: 1.6em; }
+/* Optional smaller LinkedIn fix */
+.linkedin-icon .fa-linkedin {
+  font-size: 1.85em;
+}
 
-/* arXiv badge using DHS-CAOE light blue */
+
+/* --------------------------------------- */
+/* SECTION HEADERS                         */
+/* --------------------------------------- */
+h2 {
+  border: none !important;
+  font-weight: normal !important;
+}
+
+/* Name header (only bold header) */
+.name-header {
+  font-size: 2.4em;
+  font-weight: 700 !important;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.name-header::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e5e5e5;
+  margin-bottom: 8px;
+}
+
+/* Section headers (not bold) */
+.section-title {
+  font-size: 1.35em;
+  margin-top: 25px;
+  margin-bottom: 6px;
+  padding-top: 6px;
+  position: relative;
+}
+
+.section-title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e5e5e5;
+  margin-bottom: 6px;
+}
+
+
+/* --------------------------------------- */
+/* LEFT-ALIGNED SECTION CONTENT            */
+/* --------------------------------------- */
+.section-content {
+  text-align: left;
+}
+
+
+/* --------------------------------------- */
+/* DHS-CAOE LINK                           */
+/* --------------------------------------- */
+.link-caoe {
+  text-decoration: none;
+  color: #4da3ff;
+}
+
+.link-caoe:hover {
+  color: #1d7fe0;
+}
+
+
+/* --------------------------------------- */
+/* PDF + ARXIV BADGE                       */
+/* --------------------------------------- */
+.pdf-link {
+  margin-left: 8px;
+  color: #d9534f;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.pdf-link:hover {
+  color: #b52b27;
+}
+
+/* Triangle arXiv badge */
 .arxiv-badge {
   display: inline-flex;
   align-items: center;
   margin-left: 8px;
   text-decoration: none;
-  color: #4da3ff;   /* DHS-CAOE light blue */
+  color: #4da3ff;  /* match DHS-CAOE */
   font-size: 0.9em;
 }
 
@@ -194,6 +213,6 @@ h2 {
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 10px solid #4da3ff;  /* match DHS-CAOE color */
+  border-bottom: 10px solid #4da3ff;
   margin-right: 4px;
 }
