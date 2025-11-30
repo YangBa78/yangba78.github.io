@@ -113,3 +113,24 @@ h2 {
 .section-content {
   text-align: left;
 }
+
+.link-caoe {
+  text-decoration: none;
+  color: #4da3ff;     /* light blue */
+  font-weight: normal;
+}
+
+.link-caoe:hover {
+  color: #1d7fe0;     /* slightly darker on hover */
+}
+
+.pdf-link {
+  margin-left: 8px;
+  color: #d9534f;        /* PDF red */
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.pdf-link:hover {
+  color: #b52b27;        /* darker on hover */
+}
