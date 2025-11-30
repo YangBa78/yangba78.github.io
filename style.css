@@ -67,6 +67,10 @@ section {
 /* --------------------------------------- */
 /* FOOTER + ICONS                          */
 /* --------------------------------------- */
+/* --------------------------------------- */
+/* FOOTER + ICONS                          */
+/* --------------------------------------- */
+
 footer {
   text-align: center;
   margin-top: 35px;
@@ -75,35 +79,23 @@ footer {
 }
 
 .footer-icons {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 30px;        /* spacing between icons */
   margin-bottom: 12px;
 }
 
-.footer-link {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #0366d6;
+/* Increase all FA icon sizes + make them black */
+.footer-icon {
+  font-size: 3.4rem;   /* << increase overall size */
+  color: black;        /* email + linkedin black */
 }
 
-/* Email & LinkedIn (FontAwesome icons) */
-.footer-link i {
-  font-size: 1.9em;         /* controls email + linkedin size */
-  vertical-align: middle;
-}
-
-/* Google Scholar PNG — SAME SIZE & BASELINE as FA icons */
+/* Google Scholar PNG — match size with FA icons */
 .scholar-img {
-  width: 34px;              /* match visual size with 1.9em FA icons */
-  height: 34px;
-  vertical-align: middle;   /* align baseline */
+  width: 65px;         /* increase size */
+  height: 65px;
   object-fit: contain;
-  border-radius: 0;         /* keep square, no rounding */
-  margin-bottom: -3px;      /* perfect baseline alignment */
-}
-
-/* Optional: LinkedIn slight size tweak */
-.linkedin-icon .fa-linkedin {
-  font-size: 1.9em;
 }
 
 
