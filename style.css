@@ -67,6 +67,10 @@ section {
 /* --------------------------------------- */
 /* FOOTER + ICONS                          */
 /* --------------------------------------- */
+/* --------------------------------------- */
+/* FOOTER + ICONS                          */
+/* --------------------------------------- */
+
 footer {
   text-align: center;
   margin-top: 35px;
@@ -79,32 +83,29 @@ footer {
   margin-bottom: 12px;
 }
 
-.footer-link {
-  margin: 0 12px;
-  text-decoration: none;
-  /* color: #0366d6; */
+/* Same color for all icons — sampled from Google Scholar logo (#4285F4) */
+:root {
+  --icon-blue: #4285F4;
 }
 
-/* Email & LinkedIn (FontAwesome icons) */
-.footer-link i {
-  font-size: 4em;         /* controls email + linkedin size */
-  /* vertical-align: middle; */
+/* Email + LinkedIn */
+.footer-icon {
+  font-size: 2.8rem;      /* Bigger and consistent */
+  color: var(--icon-blue);
+  margin: 0 18px;
 }
 
-/* Google Scholar PNG — SAME SIZE & BASELINE as FA icons */
+/* Google Scholar PNG — scale to match FA icons visually */
 .scholar-img {
-  width: 24px;              /* match visual size with 1.9em FA icons */
-  height: 24px;
-  /* vertical-align: middle;   align baseline */
+  width: 48px;            /* visually same as FA 2.8rem */
+  height: 48px;
   object-fit: contain;
-  /* border-radius: 0;         keep square, no rounding */
-  /* margin-bottom: -3px;      perfect baseline alignment */
+  margin: 0 12px;
+  filter: brightness(0) saturate(100%) invert(44%) sepia(85%) saturate(1847%)
+          hue-rotate(203deg) brightness(96%) contrast(92%);
+  /* above filter recolors ANY png to Google-Blue */
 }
 
-/* Optional: LinkedIn slight size tweak */
-.linkedin-icon .fa-linkedin {
-  font-size: 4em;
-}
 
 
 /* --------------------------------------- */
