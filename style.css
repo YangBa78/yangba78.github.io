@@ -16,7 +16,7 @@ body {
 }
 
 .nav-title {
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 
@@ -50,10 +50,21 @@ body {
 }
 
 /* Sections */
+
 h2 {
-  margin-top: 40px;
   border-bottom: 2px solid #eee;
   padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Photo floated right and wrapped */
+.profile-pic-right {
+  float: right;
+  width: 160px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 /* News */
@@ -90,11 +101,25 @@ h2 {
 .header-right img.profile-pic {
   order: 2;
 }
+/* Contact icons */
+.contact-icons {
+  margin-top: 20px;
+}
 
+.contact-icons a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #0366d6;
+  font-size: 1.05em;
+}
+.contact-icons i {
+  margin-right: 6px;
+}
 
+/* Footer */
 footer {
-  margin-top: 50px;
   text-align: center;
+  margin-top: 50px;
   font-size: 0.9em;
   color: #777;
 }
