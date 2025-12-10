@@ -7,36 +7,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
   <style>
-    /* Added styles for the black triangle links */
+    /* Container for the buttons to add space above them */
     .pub-links {
-      margin-top: 4px; /* Space between venue and links */
+      margin-top: 8px;
     }
     
+    /* The button style: Black text, Black border, Rectangle */
     .pub-link {
-      color: black; /* Sets text to black */
-      text-decoration: none;
-      margin-right: 15px; /* Space between arXiv and Code */
-      font-size: 0.95em;
-      display: inline-flex;
-      align-items: center;
+      display: inline-block;
+      color: black;             /* Text color */
+      border: 1px solid black;  /* The bounding rectangle */
+      padding: 2px 10px;        /* Space inside the rectangle */
+      margin-right: 10px;       /* Space between the buttons */
+      text-decoration: none;    /* Remove default underline */
+      font-size: 0.9em;         /* Adjust font size */
+      transition: all 0.2s ease; /* Smooth hover transition */
     }
 
+    /* Optional: Invert colors on hover for better user experience */
     .pub-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Ensure the existing triangle span is visible and aligns with text */
-    .triangle {
-        display: inline-block;
-        margin-right: 5px;
-        /* Assuming your style.css creates a CSS triangle using borders, 
-           we force it to be black here to match your request. 
-           If it uses a different method, this border hack ensures a black triangle appears. */
-        width: 0; 
-        height: 0; 
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-left: 8px solid black; 
+      background-color: black;
+      color: white;
     }
   </style>
 </head>
@@ -85,12 +76,8 @@
       <em>NeurIPS 2025 (NPGML Workshop)</em>
       
       <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2510.15970" target="_blank">
-            <span class="triangle"></span> arXiv
-          </a>
-          <a class="pub-link" href="#" target="_blank">
-            <span class="triangle"></span> Code
-          </a>
+          <a class="pub-link" href="https://arxiv.org/abs/2510.15970" target="_blank">arXiv</a>
+          <a class="pub-link" href="#" target="_blank">Code</a>
       </div>
     </div>
   </div>
@@ -103,12 +90,8 @@
       <em>EMNLP 2024</em>
       
       <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2410.10864" target="_blank">
-            <span class="triangle"></span> arXiv
-          </a>
-          <a class="pub-link" href="#" target="_blank">
-            <span class="triangle"></span> Code
-          </a>
+          <a class="pub-link" href="https://arxiv.org/abs/2410.10864" target="_blank">arXiv</a>
+          <a class="pub-link" href="#" target="_blank">Code</a>
       </div>
     </div>
   </div>
@@ -121,12 +104,8 @@
       <em>Behavior Research Methods</em>
       
       <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2404.17582" target="_blank">
-            <span class="triangle"></span> arXiv
-          </a>
-          <a class="pub-link" href="#" target="_blank">
-            <span class="triangle"></span> Code
-          </a>
+          <a class="pub-link" href="https://arxiv.org/abs/2404.17582" target="_blank">arXiv</a>
+          <a class="pub-link" href="#" target="_blank">Code</a>
       </div>
     </div>
   </div>
@@ -139,12 +118,8 @@
       <em>Preprint</em>
       
       <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2410.14602" target="_blank">
-            <span class="triangle"></span> arXiv
-          </a>
-          <a class="pub-link" href="#" target="_blank">
-            <span class="triangle"></span> Code
-          </a>
+          <a class="pub-link" href="https://arxiv.org/abs/2410.14602" target="_blank">arXiv</a>
+          <a class="pub-link" href="#" target="_blank">Code</a>
       </div>
     </div>
   </div>
