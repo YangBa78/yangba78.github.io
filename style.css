@@ -1,169 +1,424 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  line-height: 1.6;
-  color: #333;
+/* ===== CSS Variables for Theming ===== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --text-muted: #777777;
+  --heading-color: #222222;
+  --link-color: #b509ac; /* purple-pink like al-folio */
+  --link-hover: #8a077f;
+  --border-color: #e5e5e5;
+  --nav-bg: #ffffff;
+  --nav-border: #e5e5e5;
+  --card-bg: #ffffff;
+  --icon-color: #333333;
+  --btn-border: #333333;
+  --btn-text: #333333;
+  --btn-hover-bg: #333333;
+  --btn-hover-text: #ffffff;
+  --badge-text: #ffffff;
+  --footer-bg: transparent;
+  --code-bg: #f5f5f5;
 }
 
+[data-theme="dark"] {
+  --bg-color: #1a1a2e;
+  --text-color: #e0e0e0;
+  --text-muted: #aaaaaa;
+  --heading-color: #f0f0f0;
+  --link-color: #d98cd5;
+  --link-hover: #eab0e7;
+  --border-color: #333355;
+  --nav-bg: #16213e;
+  --nav-border: #333355;
+  --card-bg: #16213e;
+  --icon-color: #e0e0e0;
+  --btn-border: #bbbbbb;
+  --btn-text: #e0e0e0;
+  --btn-hover-bg: #e0e0e0;
+  --btn-hover-text: #1a1a2e;
+  --badge-text: #ffffff;
+  --footer-bg: transparent;
+  --code-bg: #2a2a4a;
+}
 
+/* ===== Base Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Navigation Bar ===== */
 .navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 15px;
+  padding: 12px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .nav-links a {
-  margin-left: 20px;
   text-decoration: none;
-  color: #0366d6;
-  font-size: 1.05em;
+  color: var(--text-color);
+  font-size: 1em;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--link-color);
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: var(--text-color);
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
 
+.theme-toggle:hover {
+  color: var(--link-color);
+}
+
+/* ===== About Section Layout ===== */
+#about {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.name-header {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 14px;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+
+/* Sidebar: photo + title + icons */
 .about-right {
   float: right;
-  width: 260px;
+  width: 280px;
   text-align: center;
-  margin-left: 20px;
-  margin-bottom: 5px;
+  margin-left: 30px;
+  margin-bottom: 15px;
 }
 
 .profile-pic-right {
   width: 240px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transition: box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .profile-pic-right {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+.profile-title {
+  font-size: 0.92em;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.profile-email {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Social Icons Row (under photo) */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
   margin-bottom: 6px;
 }
 
+.social-icons a {
+  color: var(--icon-color);
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
 
+.social-icons a:hover {
+  color: var(--link-color);
+  transform: scale(1.15);
+}
+
+.social-icons .scholar-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  filter: var(--scholar-filter, none);
+}
+
+[data-theme="dark"] .social-icons .scholar-img {
+  filter: invert(0.85);
+}
+
+.social-icons a:hover .scholar-img {
+  transform: scale(1.15);
+}
+
+.social-hint {
+  font-size: 0.78em;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ===== Paragraphs & Links in intro ===== */
+#about p {
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.intro-link {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.intro-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* ===== Section Titles ===== */
 section {
   margin-bottom: 22px;
 }
 
-.pub {
-  margin-bottom: 12px;
+.section-title {
+  font-size: 1.7em;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 16px;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+  border: none;
 }
-
-
-
-footer {
-  text-align: center;
-  margin-top: 35px;
-  font-size: 0.9em;
-  color: #777;
-}
-
-.footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;            /* Reduced gap from 30px to 15px */
-  margin-bottom: 12px;
-}
-
-/* Force FA icons to be black and smaller */
-.footer-icons i {
-  font-size: 2.4rem;    /* Reduced size from 3.4rem to 2.4rem */
-  color: #000 !important;     
-}
-
-/* Google Scholar PNG size */
-.scholar-img {
-  width: 45px;          /* Reduced size from 65px to 45px */
-  height: 45px;
-  object-fit: contain;
-}
-
 
 h2 {
   border: none !important;
   font-weight: normal !important;
 }
 
-/* Name header (bold + large) */
-.name-header {
-  font-size: 2.4em;
-  font-weight: 700 !important;
+h3.section-title {
+  font-size: 1.2em;
+  font-weight: 600;
   margin-top: 20px;
   margin-bottom: 10px;
-  padding-top: 10px;
-  position: relative;
+  color: var(--heading-color);
 }
 
-.name-header::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #e5e5e5;
+/* ===== Publication Entry (al-folio style) ===== */
+.pub {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 26px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
+}
+
+.pub:last-child {
+  border-bottom: none;
+}
+
+/* Venue Badge Column */
+.pub-badge-col {
+  flex-shrink: 0;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding-top: 2px;
+}
+
+.venue-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.78em;
+  font-weight: 700;
+  color: var(--badge-text);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Venue badge colors */
+.badge-neurips   { background-color: #8e24aa; }
+.badge-emnlp     { background-color: #d32f2f; }
+.badge-preprint  { background-color: #757575; }
+.badge-journal   { background-color: #1565c0; }
+.badge-ichms     { background-color: #00838f; }
+.badge-iclr      { background-color: #e91e63; }
+.badge-workshop  { background-color: #8e24aa; }
+
+.venue-badge-sub {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--badge-text);
+  background-color: #af52bf;
+}
+
+/* Publication Content */
+.pub-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-content .pub-title {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.45;
+  color: var(--heading-color);
+  margin-bottom: 4px;
+}
+
+.pub-content .pub-authors {
+  font-size: 0.92em;
+  color: var(--text-color);
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+
+.pub-content .pub-venue {
+  font-style: italic;
+  font-size: 0.9em;
+  color: var(--text-muted);
   margin-bottom: 8px;
 }
 
-/* Other section titles (not bold) */
-.section-title {
-  font-size: 1.35em;
-  margin-top: 25px;
-  margin-bottom: 6px;
-  padding-top: 6px;
-  position: relative;
+/* Publication Action Buttons */
+.pub-links {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.section-title::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #e5e5e5;
-  margin-bottom: 6px;
+.pub-link {
+  display: inline-block;
+  color: var(--btn-text);
+  border: 1px solid var(--btn-border);
+  padding: 3px 12px;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
 }
 
+.pub-link:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
 
+/* ===== Teaching & Service ===== */
 .section-content {
   text-align: left;
+  line-height: 1.8;
 }
 
-
-.link-caoe {
-  text-decoration: none;
-  color: #4da3ff;
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.88em;
+  color: var(--text-muted);
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-.link-caoe:hover {
-  color: #1d7fe0;
+.footer-icons {
+  display: none; /* Icons moved to sidebar */
 }
 
-
-.pdf-link {
-  margin-left: 8px;
-  color: #d9534f;
-  text-decoration: none;
-  font-size: 1.1em;
+/* ===== Clearfix ===== */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.pdf-link:hover {
-  color: #b52b27;
+/* ===== Responsive ===== */
+@media (max-width: 680px) {
+  body {
+    padding: 15px;
+  }
+
+  .about-right {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .profile-pic-right {
+    width: 180px;
+  }
+
+  .pub {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pub-badge-col {
+    width: auto;
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .name-header {
+    font-size: 1.7em;
+  }
 }
 
-.arxiv-badge {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 8px;
-  text-decoration: none;
-  color: #4da3ff;    /* match DHS-CAOE */
-  font-size: 0.9em;
-}
-
-.arxiv-badge .triangle {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 10px solid #4da3ff;
-  margin-right: 4px;
+/* ===== Smooth transitions for theme ===== */
+a, i, img, .pub, .pub-link, footer, .navbar, section {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }

@@ -1,182 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yang Ba</title>
+  <meta name="description"
+    content="Yang Ba – Ph.D. student in Data Science at Arizona State University. Research in machine learning, generative AI, and synthetic data." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <style>
-    /* Container for the buttons to add space above them */
-    .pub-links {
-      margin-top: 8px;
-    }
-    
-    /* The button style: Black text, Black border, Rectangle */
-    .pub-link {
-      display: inline-block;
-      color: black;             /* Text color */
-      border: 1px solid black;  /* The bounding rectangle */
-      padding: 2px 10px;        /* Space inside the rectangle */
-      margin-right: 10px;       /* Space between the buttons */
-      text-decoration: none;    /* Remove default underline */
-      font-size: 0.9em;         /* Adjust font size */
-      transition: all 0.2s ease; /* Smooth hover transition */
-    }
-
-    /* Optional: Invert colors on hover for better user experience */
-    .pub-link:hover {
-      background-color: black;
-      color: white;
-    }
-  </style>
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="nav-spacer"></div>
-  <div class="nav-links">
-    <a href="index.html">About</a>
-    <a href="publications.html">Publications</a>
-  </div>
-</nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html" class="active">About</a>
+      <a href="publications.html">Publications</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </nav>
 
-<section id="about">
-  <h2 class="name-header">Yang Ba</h2>
+  <!-- About Section -->
+  <section id="about" class="clearfix">
+    <h1 class="name-header">Yang Ba</h1>
 
-  <div class="about-right">
-    <img src="IMG_2887.jpg" alt="Profile picture" class="profile-pic-right" />
-  </div>
+    <div class="about-right">
+      <img src="IMG_2887.jpg" alt="Yang Ba profile photo" class="profile-pic-right" />
+      <div class="profile-title">PhD Student @ ASU SCAI</div>
+      <div class="profile-email">yangba [at] asu [dot] edu</div>
+      <div class="social-icons">
+        <a href="mailto:yangba@asu.edu" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=gXDjDzsAAAAJ&hl=en" target="_blank"
+          aria-label="Google Scholar">
+          <img src="Academicons-Team-Academicons-Google-scholar.512.png" alt="Google Scholar" class="scholar-img">
+        </a>
+        <a href="https://www.linkedin.com/in/yang-ba-378733186/" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
 
-  <p>
-    I am a final-year Ph.D. student in Data Science, Analytics and Engineering at
-    Arizona State University, School of Computing and Augmented Intelligence (ASU SCAI), where I am co-supervised by
-    Dr. Rong Pan and Dr. Michelle V. Mancenido, and worked with the DHS Center for Accelerating Operational Efficiency (<a class="link-caoe" href="https://caoe.asu.edu" target="_blank">DHS-CAOE</a>).
-    I previously earned my M.S. in Business Analytics from the University of Connecticut.
-  </p>
+    <p>
+      I am a final-year Ph.D. student in Data Science, Analytics and Engineering at
+      Arizona State University, School of Computing and Augmented Intelligence (ASU SCAI), where I am co-supervised by
+      <a class="intro-link" href="https://search.asu.edu/profile/1340498" target="_blank">Dr. Rong Pan</a> and
+      <a class="intro-link" href="https://search.asu.edu/profile/3641348" target="_blank">Dr. Michelle V. Mancenido</a>,
+      and worked with the DHS Center for Accelerating Operational Efficiency
+      (<a class="intro-link" href="https://caoe.asu.edu" target="_blank">DHS-CAOE</a>).
+      I previously earned my M.S. in Business Analytics from the University of Connecticut.
+    </p>
 
-  <p>
-    My research interests span machine learning and generative AI, with a particular focus on large language models 
-    (LLMs) and multimodal learning. I investigate synthetic data generation and evaluation, aiming to understand and 
-    improve how generative and foundation models learn, represent, and generalize across modalities. My current work 
-    explores the benefits and risks of synthetic data, advances model uncertainty quantification, and improves multimodal 
-    performance through latent space alignment. Broadly, I seek to advance responsible AI systems through the effective 
-    use of synthetic data and model interpretability. Additionally, I have a strong background in statistical data analysis.  
-  </p>
+    <p>
+      My research interests span machine learning and generative AI, with a particular focus on large language models
+      (LLMs) and multimodal learning. I investigate synthetic data generation and evaluation, aiming to understand and
+      improve how generative and foundation models learn, represent, and generalize across modalities. My current work
+      explores the benefits and risks of synthetic data, advances model uncertainty quantification, and improves
+      multimodal
+      performance through latent space alignment. Broadly, I seek to advance responsible AI systems through the
+      effective
+      use of synthetic data and model interpretability. Additionally, I have a strong background in statistical data
+      analysis.
+    </p>
 
-</section>
+  </section>
 
-<section>
-  <h2 class="section-title">Selected Publications</h2>
+  <!-- Selected Publications -->
+  <section>
+    <h2 class="section-title">Selected Publications</h2>
 
-  <div class="pub">
-    <div>
-      <strong>Predict Training Data Quality via Its Geometry in Metric Space</strong>
-      <br />
-      <strong>Yang Ba,</strong> Mohammad Sadeq Abolhasani, Rong Pan<br />
-      <em>NeurIPS 2025 (NPGML Workshop)</em>
-      
-      <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2510.15970" target="_blank">arXiv</a>
+    <!-- Pub: Geometry-Aware -->
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-iclr">ICLR</span>
+        <span class="venue-badge-sub">Workshop</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Geometry-Aware Metric for Dataset Diversity via Persistence Landscapes</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Mohammad Sadeq Abolhasani, Rong Pan</div>
+        <div class="pub-venue">ICLR 2026 Workshop</div>
+      </div>
+    </div>
+
+    <!-- Pub 1 -->
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-neurips">NeurIPS</span>
+        <span class="venue-badge-sub">Workshop</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Predict Training Data Quality via Its Geometry in Metric Space</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Mohammad Sadeq Abolhasani, Rong Pan</div>
+        <div class="pub-venue">NeurIPS 2025 (NPGML Workshop)</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://arxiv.org/abs/2510.15970" target="_blank">Paper</a>
           <a class="pub-link" href="NPGML.pdf" target="_blank">Slides</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="pub">
-    <div>
-      <strong>Fill In The Gaps: Model Calibration and Generalization with Synthetic Data</strong>
-      <br />
-      <strong>Yang Ba,</strong> Michelle V. Mancenido, Rong Pan<br />
-      <em>EMNLP 2024</em>
-      
-      <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2410.10864" target="_blank">arXiv</a>
+    <!-- Pub 2 -->
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-emnlp">EMNLP</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Fill In The Gaps: Model Calibration and Generalization with Synthetic Data</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Michelle V. Mancenido, Rong Pan</div>
+        <div class="pub-venue">In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing
+          (EMNLP) 2024</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://arxiv.org/abs/2410.10864" target="_blank">Paper</a>
           <a class="pub-link" href="Fill.pdf" target="_blank">Slides</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="pub">
-    <div>
-      <strong>Data Quality in Crowdsourcing and Spamming Behavior Detection</strong>
-      <br />
-      <strong>Yang Ba,</strong> Michelle V. Mancenido, Erin K. Chiou, Rong Pan<br />
-      <em>Behavior Research Methods</em>
-      
-      <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2404.17582" target="_blank">arXiv</a>
+    <!-- Pub 3 -->
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-journal">Journal</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Data Quality in Crowdsourcing and Spamming Behavior Detection</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Michelle V. Mancenido, Erin K. Chiou, Rong Pan</div>
+        <div class="pub-venue">Behavior Research Methods</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://arxiv.org/abs/2404.17582" target="_blank">Paper</a>
           <a class="pub-link" href="https://github.com/YangBa78/Data-Reliabilty" target="_blank">Code</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="pub">
-    <div>
-      <strong>Data Diversity as Implicit Regularization: How Does Diversity Shape the Weight Space of Deep Neural Networks?</strong>
-      <br />
-      <strong>Yang Ba,</strong> Michelle V. Mancenido, Rong Pan<br />
-      <em>Preprint</em>
-      
-      <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2410.14602" target="_blank">arXiv</a>
-          <a class="pub-link" href="https://github.com/YangBa78/Data-Diversity-as-Implicit-Regularization" target="_blank">Code</a>
+    <!-- Pub 4 -->
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-preprint">Preprint</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Data Diversity as Implicit Regularization: How Does Diversity Shape the Weight Space of
+          Deep Neural Networks?</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Michelle V. Mancenido, Rong Pan</div>
+        <div class="pub-venue">Preprint</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://arxiv.org/abs/2410.14602" target="_blank">Paper</a>
+          <a class="pub-link" href="https://github.com/YangBa78/Data-Diversity-as-Implicit-Regularization"
+            target="_blank">Code</a>
+        </div>
       </div>
     </div>
-  </div>
-  
-</section>
 
-<section id="teaching">
-  <h2 class="section-title">Teaching Experience</h2>
-  <div class="section-content">
-    Teaching Assistant, Arizona State University, CSE 110: Principles of Programming, Fall 2021<br>
-    Graduate Teaching Assistant, University of Connecticut, OPIM 5671: Data Mining and Business Intelligence, Spring 2021
-  </div>
-</section>
+  </section>
 
-<section id="service">
-  <h2 class="section-title">Professional Service</h2>
-  <div class="section-content">
-    Reviewer: ICLR 2025, 2026, NeurIPS 2025, Journal of Quality Technology
-  </div>
-</section>
+  <!-- Award -->
+  <section id="award">
+    <h2 class="section-title">Award</h2>
+    <div class="section-content">
+      Awarded ASU SCAI Doctoral Fellowship, 2023<br>
+      Secured the 6th place at the 2nd Annual Big Data Health Science Case Competition, 2021<br>
+      Achieved 1st place for the final projects in the Data Mining class at UConn, 2020
+    </div>
+  </section>
 
-<footer>
-<div class="footer-icons">
+  <!-- Teaching Experience -->
+  <section id="teaching">
+    <h2 class="section-title">Teaching Experience</h2>
+    <div class="section-content">
+      Teaching Assistant, Arizona State University, CSE 110: Principles of Programming, Fall 2021<br>
+      Graduate Teaching Assistant, University of Connecticut, OPIM 5671: Data Mining and Business Intelligence, Spring
+      2021
+    </div>
+  </section>
 
-  <a href="mailto:yangba@asu.edu" class="footer-link">
-    <i class="fa-solid fa-envelope footer-icon"></i>
-  </a>
+  <!-- Professional Service -->
+  <section id="service">
+    <h2 class="section-title">Professional Service</h2>
+    <div class="section-content">
+      Reviewer: ICLR 2025, 2026, NeurIPS 2025, Journal of Quality Technology
+    </div>
+  </section>
 
-  <a href="https://scholar.google.com/citations?user=gXDjDzsAAAAJ&hl=en"
-     class="footer-link" target="_blank">
-    <img src="Academicons-Team-Academicons-Google-scholar.512.png" alt="Google Scholar" class="scholar-img">
-  </a>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Yang Ba. Powered by GitHub Pages.</p>
+    <p>Last updated: Mar 3, 2026</p>
+  </footer>
 
-  <a href="https://www.linkedin.com/in/yang-ba-378733186/"
-     class="footer-link" target="_blank">
-    <i class="fa-brands fa-linkedin footer-icon"></i>
-  </a>
+  <!-- Scripts -->
+  <script>
+    // ===== Theme Toggle =====
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
 
-</div>
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    }
 
-  <div id="updated-date"></div>
+    // Load saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
 
-  © <span id="year"></span> Yang Ba — Powered by GitHub Pages
-</footer>
-
-
-<script>
-  // auto year
-  document.getElementById("year").innerText = new Date().getFullYear();
-
-  // last updated
-  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  const now = new Date();
-  const formatted = months[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
-  document.getElementById("updated-date").innerText = "Last updated: " + formatted;
-</script>
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
 
 </body>
+
 </html>

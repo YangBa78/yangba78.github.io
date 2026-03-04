@@ -1,169 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications — Yang Ba</title>
+  <meta name="description"
+    content="Full list of publications by Yang Ba — conference papers, journal articles, and preprints." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    /* Style for the clickable titles */
-    .pub-title-link {
-        color: inherit; /* Keeps the text black (or whatever strong is set to) */
-        text-decoration: none; /* Removes default blue underline */
-        cursor: pointer;
-    }
-    
-    .pub-title-link:hover {
-        text-decoration: underline; /* Adds underline on hover */
-        color: #333; /* Optional: slight color shift on hover */
-    }
-  </style>
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="nav-title">Yang Ba</div>
-  <div class="nav-links">
-    <a href="index.html">About</a>
-  </div>
-</nav>
-
-<section id="publications">
-  <h3 class="section-title">Conference Publications</h3>
-
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="https://arxiv.org/abs/2510.15970" class="pub-title-link" target="_blank">
-          Predict Training Data Quality via Its Geometry in Metric Space
-        </a>
-      </strong><br />
-      <strong>Yang Ba,</strong> Mohammad Sadeq Abolhasani, Rong Pan<br />
-      <em>NeurIPS 2025 (NPGML Workshop)</em>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <a href="publications.html" class="active">Publications</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
-  </div>
+  </nav>
 
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="https://aclanthology.org/2024.emnlp-main.955" class="pub-title-link" target="_blank">
-          Fill In The Gaps: Model Calibration and Generalization with Synthetic Data
-        </a>
-      </strong><br />
-      <strong>Yang Ba,</strong> Michelle V. Mancenido, Rong Pan<br />
-      <em>EMNLP 2024</em>
+  <!-- Conference Publications -->
+  <section id="publications">
+    <h2 class="section-title">Conference Publications</h2>
+
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-neurips">NeurIPS</span>
+        <span class="venue-badge-sub">Workshop</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Predict Training Data Quality via Its Geometry in Metric Space</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Mohammad Sadeq Abolhasani, Rong Pan</div>
+        <div class="pub-venue">NeurIPS 2025 (NPGML Workshop)</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://arxiv.org/abs/2510.15970" target="_blank">Paper</a>
+          <a class="pub-link" href="NPGML.pdf" target="_blank">Slides</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="https://ieeexplore.ieee.org/abstract/document/9980623" class="pub-title-link" target="_blank">
-          Trust in AI-Enabled Decision Support Systems: Preliminary Validation of MAST Criteria
-        </a>
-      </strong><br />
-      Erin K. Chiou, Pouria Salehi, Erik Blasch, James Sung, Myke C. Cohen, Anna Pan,
-      Michelle V. Mancenido, Ahmadreza Mosallanezhad, <strong>Yang Ba,</strong> Shawaiz Bhatti<br />
-      <em>ICHMS 2022</em>
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-emnlp">EMNLP</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Fill In The Gaps: Model Calibration and Generalization with Synthetic Data</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Michelle V. Mancenido, Rong Pan</div>
+        <div class="pub-venue">In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing
+          (EMNLP) 2024</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://arxiv.org/abs/2410.10864" target="_blank">Paper</a>
+          <a class="pub-link" href="Fill.pdf" target="_blank">Slides</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <h3 class="section-title">Preprints / Under Review</h3>
-
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="#" class="pub-title-link" target="_blank">
-          Geometry-Aware Metric for Dataset Diversity via Persistence Landscapes
-        </a>
-      </strong><br />
-      <strong>Yang Ba,</strong> Mohammad Sadeq Abolhasani, Rong Pan<br />
-      <em>In Submission</em>
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-ichms">ICHMS</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Trust in AI-Enabled Decision Support Systems: Preliminary Validation of MAST Criteria
+        </div>
+        <div class="pub-authors">
+          Erin K. Chiou, Pouria Salehi, Erik Blasch, James Sung, Myke C. Cohen, Anna Pan,
+          Michelle V. Mancenido, Ahmadreza Mosallanezhad, <strong>Yang Ba</strong>, Shawaiz Bhatti
+        </div>
+        <div class="pub-venue">In International Conference on Human-Machine Systems (ICHMS) 2022</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/9980623" target="_blank">Paper</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="https://arxiv.org/abs/2410.14602" class="pub-title-link" target="_blank">
-          Data Diversity as Implicit Regularization: How Does Diversity Shape the Weight Space of Deep Neural Networks?
-        </a>
-      </strong><br />
-      <strong>Yang Ba,</strong> Michelle V. Mancenido, Rong Pan<br />
-      <em>Preprint</em>
+    <!-- Preprints / Under Review -->
+    <h2 class="section-title">Preprints / Under Review</h2>
+
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-preprint">Preprint</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Geometry-Aware Metric for Dataset Diversity via Persistence Landscapes</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Mohammad Sadeq Abolhasani, Rong Pan</div>
+        <div class="pub-venue">In Submission</div>
+      </div>
     </div>
-  </div>
 
-  <h3 class="section-title">Journal Publications</h3>
-
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="https://arxiv.org/abs/2404.17582" class="pub-title-link" target="_blank">
-          Data Quality in Crowdsourcing and Spamming Behavior Detection
-        </a>
-      </strong><br />
-      <strong>Yang Ba,</strong> Michelle V. Mancenido, Erin K. Chiou, Rong Pan<br />
-      <em>Behavior Research Methods</em>
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-preprint">Preprint</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Data Diversity as Implicit Regularization: How Does Diversity Shape the Weight Space of
+          Deep Neural Networks?</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Michelle V. Mancenido, Rong Pan</div>
+        <div class="pub-venue">Preprint</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://arxiv.org/abs/2410.14602" target="_blank">Paper</a>
+          <a class="pub-link" href="https://github.com/YangBa78/Data-Diversity-as-Implicit-Regularization"
+            target="_blank">Code</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="https://www.tandfonline.com/doi/abs/10.1080/10447318.2025.2564272" class="pub-title-link" target="_blank">
-          Impact of EXplainable AI on Trust Evolution with AI Error Severity: Comparing Similar Instances and Saliency Map in a Baggage Screening Task
-        </a>
-      </strong><br />
-      Yixuan Wang, Jieqiong Zhao, <strong>Yang Ba,</strong> Michelle V. Mancenido, Erin K. Chiou, Ross Maciejewski<br />
-      <em>International Journal of Human-Computer Interaction</em>
+    <!-- Journal Publications -->
+    <h2 class="section-title">Journal Publications</h2>
+
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-journal">Journal</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Data Quality in Crowdsourcing and Spamming Behavior Detection</div>
+        <div class="pub-authors"><strong>Yang Ba</strong>, Michelle V. Mancenido, Erin K. Chiou, Rong Pan</div>
+        <div class="pub-venue">Behavior Research Methods</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://arxiv.org/abs/2404.17582" target="_blank">Paper</a>
+          <a class="pub-link" href="https://github.com/YangBa78/Data-Reliabilty" target="_blank">Code</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="https://dl.acm.org/doi/pdf/10.1613/jair.1.14990" class="pub-title-link" target="_blank">
-          Towards trustworthy AI-enabled decision support systems: Validation of the multisource AI scorecard table (MAST)
-        </a>
-      </strong><br />
-      Pouria Salehi, <strong>Yang Ba,</strong> Nayoung Kim, Ahmadreza Mosallanezhad, Anna Pan,
-      Myke C. Cohen, Yixuan Wang, Jieqiong Zhao, Shawaiz Bhatti,
-      Michelle V. Mancenido, Erin K. Chiou, Erik Blasch, James Sung<br />
-      <em>Journal of Artificial Intelligence Research</em>
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-journal">Journal</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Impact of EXplainable AI on Trust Evolution with AI Error Severity: Comparing Similar
+          Instances and Saliency Map in a Baggage Screening Task</div>
+        <div class="pub-authors">
+          Yixuan Wang, Jieqiong Zhao, <strong>Yang Ba</strong>, Michelle V. Mancenido, Erin K. Chiou, Ross Maciejewski
+        </div>
+        <div class="pub-venue">International Journal of Human-Computer Interaction</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://www.tandfonline.com/doi/abs/10.1080/10447318.2025.2564272"
+            target="_blank">Paper</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="pub">
-    <div>
-      <strong>
-        <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/aaai.70000" class="pub-title-link" target="_blank">
-          PADTHAI-MM: Principles-based approach for designing trustworthy, human-centered AI using the MAST methodology
-        </a>
-      </strong><br />
-      Myke C. Cohen, Nayoung Kim, <strong>Yang Ba,</strong> Anna Pan, Shawaiz Bhatti, Pouria Salehi,
-      James Sung, Erik Blasch, Michelle V. Mancenido, Erin K. Chiou<br />
-      <em>AI Magazine</em>
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-journal">Journal</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Towards trustworthy AI-enabled decision support systems: Validation of the multisource AI
+          scorecard table (MAST)</div>
+        <div class="pub-authors">
+          Pouria Salehi, <strong>Yang Ba</strong>, Nayoung Kim, Ahmadreza Mosallanezhad, Anna Pan,
+          Myke C. Cohen, Yixuan Wang, Jieqiong Zhao, Shawaiz Bhatti,
+          Michelle V. Mancenido, Erin K. Chiou, Erik Blasch, James Sung
+        </div>
+        <div class="pub-venue">Journal of Artificial Intelligence Research</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://dl.acm.org/doi/pdf/10.1613/jair.1.14990" target="_blank">Paper</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-</section>
+    <div class="pub">
+      <div class="pub-badge-col">
+        <span class="venue-badge badge-journal">Journal</span>
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">PADTHAI-MM: Principles-based approach for designing trustworthy, human-centered AI using
+          the MAST methodology</div>
+        <div class="pub-authors">
+          Myke C. Cohen, Nayoung Kim, <strong>Yang Ba</strong>, Anna Pan, Shawaiz Bhatti, Pouria Salehi,
+          James Sung, Erik Blasch, Michelle V. Mancenido, Erin K. Chiou
+        </div>
+        <div class="pub-venue">AI Magazine</div>
+        <div class="pub-links">
+          <a class="pub-link" href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/aaai.70000"
+            target="_blank">Paper</a>
+        </div>
+      </div>
+    </div>
 
-<footer>
-  <div class="footer-icons">
-    <a href="mailto:yangba@asu.edu"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://scholar.google.com/citations?user=gXDjDzsAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i></a>
-    <a href="https://www.linkedin.com/in/yang-ba-378733186/" target="_blank" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
-  </div>
+  </section>
 
-  © <span id="year"></span> Yang Ba — Powered by GitHub Pages
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Yang Ba. Powered by GitHub Pages.</p>
+    <p>Last updated: Mar 3, 2026</p>
+  </footer>
 
-<script>
-  document.getElementById("year").innerText = new Date().getFullYear();
-</script>
+  <!-- Scripts -->
+  <script>
+    // ===== Theme Toggle =====
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
 
 </body>
+
 </html>
